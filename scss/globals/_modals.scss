@@ -1,0 +1,30 @@
+/* 
+  Modal starting point 
+*/
+.ddl-modal-content {
+    min-height: 440px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  
+    .ddl-modal-header {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 2rem;
+    }
+  
+    .ddl-modal-body {
+      .v-center {
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+  
+    .ddl-modal-footer {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+  }

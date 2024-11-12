@@ -1,0 +1,26 @@
+@use "../utilities/" as util;
+
+:root {
+  @each $type, $tones in util.$scheme {
+    @each $tone, $values in $tones {
+      --#{$type}-#{$tone}: #{$values};
+    }
+  }
+}
+
+@each $type, $tones in util.$scheme {
+  @each $tone, $values in $tones {
+    @if $type == "gradient" {
+      .ddl_color-bg-#{$type}-#{$tone} {
+        background-image: $values;
+      }
+    } @else {
+      .ddl_color-bg-#{$type}-#{$tone} {
+        background-color: $values;
+      }
+      .ddl_color-text-#{$type}-#{$tone} {
+        color: $values;
+      }
+    }
+  }
+}

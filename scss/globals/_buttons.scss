@@ -1,0 +1,87 @@
+/* 
+  Buttons starting point 
+*/
+$buttons: (
+  primary: (
+    "font-weight": var(--ddl-font-weight-bold),
+    "color": var(--gray-950),
+    "bg-color": var(--orange-500),
+    "border-color": var(--gray-950),
+    "hover-color": var(--gray-50),
+    "hover-bg": var(--orange-800),
+    "hover-border-color": var(--gray-950),
+    "active-color": var(--gray-100),
+    "active-bg": var(--secondary-40),
+    "active-border-color": var(--secondary-40),
+    "padding": .5rem 3rem,
+    "shadow": 3px 3px rgba(22, 22, 22, 0.9),
+  ),
+  /*
+  icon-primary: (
+    "font-weight": var(--ddl-font-weight-3),
+    "color": var(--gray-100),
+    "bg-color": var(--secondary-50),
+    "border-color": var(--secondary-50),
+    "hover-color": var(--gray-100),
+    "hover-bg": var(--secondary-50),
+    "hover-border-color": var(--secondary-50),
+    "active-color": var(--gray-100),
+    "active-bg": var(--secondary-40),
+    "active-border-color": var(--secondary-40),
+    "padding": 0.75rem 1rem,
+    "shadow": 3px 3px 8px 0px rgba(104, 49, 8, 0.25),
+  ),
+  outline-primary: (
+    "font-weight": var(--ddl-font-weight-3),
+    "color": var(--secondary-50),
+    "bg-color": var(--bc-white-0),
+    "border-color": var(--secondary-50),
+    "hover-color": var(--secondary-40),
+    "hover-bg": var(--secondary-100),
+    "hover-border-color": var(--secondary-40),
+    "active-color": var(--gray-100),
+    "active-bg": var(--secondary-40),
+    "active-border-color": var(--secondary-40),
+    "padding": 0.375rem 1rem,
+    "shadow": 3px 3px 8px 0px rgba(104, 49, 8, 0.25),
+  ),
+  icon-outline-primary: (
+    "font-weight": var(--ddl-font-weight-3),
+    "color": var(--secondary-50),
+    "bg-color": var(--bc-white-0),
+    "border-color": var(--secondary-50),
+    "hover-color": var(--gray-100),
+    "hover-bg": var(--secondary-50),
+    "hover-border-color": var(--secondary-50),
+    "active-color": var(--gray-100),
+    "active-bg": var(--secondary-40),
+    "active-border-color": var(--secondary-40),
+    "padding": 0.75rem 1rem,
+    "shadow": 3px 3px 8px 0px rgba(104, 49, 8, 0.25),
+  ),
+  */
+);
+
+@each $label, $map in $buttons {
+  .btn-ddl_#{$label} {
+    #{--bs-btn-font-weight}: map-get($map, font-weight);
+    #{--bs-btn-color}: map-get($map, color);
+    #{--bs-btn-bg}: map-get($map, bg-color);
+    #{--bs-btn-border-color}: map-get($map, border-color);
+    padding: map-get($map, padding);
+    border-radius: 0;
+    #{--bs-btn-hover-color}: map-get($map, hover-color);
+    #{--bs-btn-hover-bg}: map-get($map, hover-bg);
+    #{--bs-btn-hover-border-color}: map-get($map, hover-border-color);
+    #{--bs-btn-active-color}: map-get($map, active-color);
+    #{--bs-btn-active-bg}: map-get($map, active-bg);
+    #{--bs-btn-active-border-color}: map-get($map, active-border-color);
+
+    box-shadow: 6px 6px rgba(22, 22, 22, 0.9);
+
+    &:hover {
+      box-shadow: map-get($map, shadow);
+    }
+  }
+}
+

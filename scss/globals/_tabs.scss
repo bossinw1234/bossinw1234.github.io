@@ -1,0 +1,29 @@
+/* 
+  Tab starting point 
+*/
+.ddl-tab{
+    #{--bs-nav-underline-gap}: 0;
+
+    .ddl-tab--link{
+        padding-left: 2.188rem;
+        padding-right: 2.188rem;
+
+        color: var(--gray-50);
+        border-bottom-color: var(--gray-50);
+
+        &:hover{
+            color: var(--red-50);
+        }
+    }
+
+    .ddl-tab--link.active{
+        color: var(--red-50);
+    }
+
+    .ddl-tab--link.disabled{
+        color: var(--gray-50);
+        background-color: var(--gray-80);
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+}

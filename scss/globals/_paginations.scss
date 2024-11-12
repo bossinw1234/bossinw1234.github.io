@@ -1,0 +1,24 @@
+/* 
+  Pagination starting point 
+*/
+.ddl-paginations {
+  #{--bs-pagination-border-color}: rgba(255, 255, 255, 0);
+
+  .page-link {
+    color: var(--gray-10);
+
+    &:hover {
+      background-color: var(--primary-90);
+      border-color: var(--primary-90);
+      border-radius: 0.375rem;
+      color: var(--gray-10);
+    }
+  }
+
+  .page-link.active {
+    background-color: var(--primary-40);
+    border-color: var(--primary-40);
+    border-radius: 0.375rem;
+    color: var(--gray-100);
+  }
+}

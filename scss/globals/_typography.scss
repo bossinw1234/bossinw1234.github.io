@@ -1,0 +1,72 @@
+@use "../utilities/" as util;
+
+// Set font
+$ddl-primary-font: util.$font-base--primary;
+$ddl-secondary-font: util.$font-base--secondary;
+/* 
+  Typo starting point 
+*/
+$ddl-type-base-size: 16px;
+$ddl-scale-ratio: 1.2;
+
+$typescales: (
+  "display"
+    (
+      l: util.rem(57),
+      m: util.rem(45),
+      s: util.rem(36),
+    ),
+  "headline"
+    (
+      l: util.rem(32),
+      m: util.rem(28),
+      s: util.rem(24),
+    ),
+  "title"
+    (
+      l: util.rem(22),
+      m: util.rem(16),
+      s: util.rem(14),
+    ),
+  "label"
+    (
+      l: util.rem(14),
+      m: util.rem(12),
+      s: util.rem(11),
+    ),
+  "body"
+    (
+      l: util.rem(16),
+      m: util.rem(14),
+      s: util.rem(12),
+    )
+);
+
+$font-weights: (
+  "light": 300,
+  "regular": 400,
+  "bold": 700,
+);
+
+@each $type, $scales in $typescales {
+  @each $scale, $values in $scales {
+    .ddl_typesscale-#{$type}-#{$scale} {
+      font-size: $values;
+      @if $type == "display" or $type == "headline" or $type == "title" {
+        font-family: $ddl-primary-font;
+        line-height: 1.2;
+        font-style: normal;
+      } @else {
+        font-family: $ddl-primary-font;
+        line-height: 1.5;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+@each $name, $weight in $font-weights {
+  .ddl_typesweight-#{$name} {
+    font-weight: #{$weight} !important;
+  }
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&display=swap');
+
+$font-thai: "IBM Plex Sans Thai Looped", sans-serif;
+$font-eng: "Inter", sans-serif;
+
+$font-base--primary: $font-thai !default;
+$font-base--secondary: $font-eng !default;
+
+$font-weights: (
+  "light": 300,
+  "regular": 400,
+  "bold": 700,
+);
+
+:root {
+  @each $i, $weight in $font-weights {
+    --ddl-font-weight-#{$i}: #{$weight};
+  }
+}

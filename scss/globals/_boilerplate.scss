@@ -1,0 +1,28 @@
+html {
+  font-size: 100%; // 62.5%;
+}
+
+.center__v {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.c-logo {
+  min-width: 40px;
+}
+
+.m-logo {
+  max-height: 60px;
+  min-width: 149px;
+}
+
+.orange-line {
+  margin: 2rem 0;
+  color: var(--orange-500);
+  border: 0;
+  border-top: 4px solid;
+  opacity: 1;
+  width: 30%;
+}

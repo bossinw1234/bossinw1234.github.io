@@ -1,0 +1,72 @@
+/* 
+  Sidebar starting point 
+*/
+
+.ddl-sb {
+  &--item {
+    #{--bs-nav-pills-border-radius}: 1.5rem;
+    #{--bs-nav-pills-link-active-bg}: var(--orange-500);
+  }
+}
+
+.sb-vr {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 100vh;
+}
+
+.sb-s {
+  width: 4.5rem;
+  transition: 0.25s;
+
+  .sb-menu {
+    height: 2.5rem;
+    margin-left: 2px;
+  }
+
+  .sb-open {
+    display: none;
+  }
+}
+
+.sb-w {
+  width: 280px;
+  transition: 0.25s;
+
+  .sb-open {
+    display: block;
+  }
+}
+
+.sb-content-w {
+  margin-left: 4.5rem;
+  transition: 0.5s;
+}
+
+.sb-content-s {
+  margin-left: 280px;
+  transition: 0.5s;
+}
+
+.sbm {
+  color: var(--orange-50);
+  padding-left: 8px;
+  opacity: 0.5;
+  transition: 0.5s;
+
+  &:hover {
+    color: var(--orange-50);
+    opacity: 1;
+  }
+}
+
+.sbm-active {
+  color: var(--gray-50);
+  border-left: 4px solid var(--gray-50) !important;
+  border-radius: 0;
+  opacity: 1;
+
+  &:hover {
+    color: var(--gray-50);
+  }
+}

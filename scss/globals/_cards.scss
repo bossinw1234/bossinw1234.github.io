@@ -1,0 +1,22 @@
+/* 
+  Card starting point 
+*/
+.ddl-card {
+  &__type1 {
+    background-color: var(--satin-50);
+    border-color: var(--satin-50);
+    padding: 1rem;
+    border-radius: 0;
+
+    .card-img-top{
+      width: 20rem !important;
+      height: 20rem !important;
+    }
+
+    .card-body{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
